@@ -1,0 +1,7 @@
+<div class="todo-list-container">
+  <ul class="todo-list">
+    <li *ngFor="let todo of todos" (click)="selectTodo(todo)" class="todo-item">
+      {{ todo.title }}
+    </li>
+  </ul>
+</div>

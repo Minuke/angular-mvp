@@ -1,0 +1,8 @@
+<ng-container *ngIf="state$ | async as state">
+  <app-todo-dummy
+    [todos]="state.todos"
+    (todoSelected)="onTodoSelected($event)"
+  ></app-todo-dummy>
+  <div *ngIf="state.isLoading">Loading...</div>
+  <div *ngIf="state.error" class="error">{{ state.error }}</div>
+</ng-container>
