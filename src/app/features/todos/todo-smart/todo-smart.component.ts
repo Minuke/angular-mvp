@@ -3,7 +3,6 @@ import { Todo } from '@entities/interfaces/todo.interface';
 import { TodoService } from '../data-access/todo.service';
 import { TodoDummyComponent } from '../todo-dummy/todo-dummy.component';
 import { CommonModule } from '@angular/common';
-import { TodoStore } from '../store/todo.store';
 
 @Component({
   selector: 'app-todo-smart',
@@ -13,10 +12,10 @@ import { TodoStore } from '../store/todo.store';
 })
 export class TodoSmartComponent implements OnInit {
 
-  public todoStore = inject(TodoStore);
-  public todoService = inject(TodoService);
+  private todoService = inject(TodoService);
 
-  public state$ = this.todoStore.state$;
+  // El estado ahora proviene del servicio (fachada).
+  public state$ = this.todoService.state$;
 
   public ngOnInit(): void {
     this.todoService.loadTodos();
