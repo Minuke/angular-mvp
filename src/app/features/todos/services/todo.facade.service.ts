@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TodoStore } from '../store/todo.store';
-import { TodoAdapterService } from './todo-adapter.service';
+import { TodoAdapterService } from './todo.adapter.service';
 import { TodoState } from '../store/todo.state';
 
 @Injectable({

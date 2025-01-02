@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Todo } from '@entities/interfaces/todo.interface';
-import { TodoService } from '../data-access/todo.service';
-import { TodoDummyComponent } from '../todo-dummy/todo-dummy.component';
+import { TodoService } from '../../../services/todo.facade.service';
+import { TodoDummyComponent } from '../../ui/todo-dummy/todo-dummy.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
